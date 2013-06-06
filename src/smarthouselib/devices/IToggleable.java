@@ -1,4 +1,6 @@
-package smarthouse;
+package smarthouselib.devices;
+
+import smarthouselib.devices.drivers.IToggleableDriver;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,8 +9,14 @@ package smarthouse;
  * Time: 2:44 PM
  * To change this template use File | Settings | File Templates.
  */
-public interface IToggleable {
+public interface IToggleable
+{
+
   void turnOn();
+
   void turnOff();
+
   void toggle();
+
+  IToggleableDriver getToggleableDriver();
 }

@@ -1,4 +1,4 @@
-package smarthouse.drivers;
+package smarthouselib.devices;
 
 /*
  * To change this template, choose Tools | Templates
@@ -6,11 +6,13 @@ package smarthouse.drivers;
  */
 
 /**
- *
  * @author Ricardo A Cabral
  */
-public interface IToggleableDriver {
-   
-    void turnOn();
-    void turnOff();
+public enum DeviceState
+{
+  Unknown,
+  On,
+  Off,
+  Busy,
+  Invalid
 }
