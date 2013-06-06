@@ -1,4 +1,4 @@
-package smarthouse;
+package smarthouselib;
 
 /**
  * @author cameri

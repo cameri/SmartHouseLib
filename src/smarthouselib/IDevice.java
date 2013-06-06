@@ -1,11 +1,11 @@
-package smarthouse;
+package smarthouselib;
 
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
-import smarthouse.drivers.IToggleableDriver;
+import smarthouselib.drivers.IToggleableDriver;
 
 /**
  *

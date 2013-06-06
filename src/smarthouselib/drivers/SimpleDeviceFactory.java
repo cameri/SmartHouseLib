@@ -2,9 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package smarthouse.drivers;
+package smarthouselib.drivers;
 
-import smarthouse.devices.Lamp;
+import smarthouselib.devices.Lamp;
 
 /**
  *

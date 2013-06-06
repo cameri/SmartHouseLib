@@ -1,4 +1,4 @@
-package smarthouse;
+package smarthouselib;
 
 /*
  * To change this template, choose Tools | Templates

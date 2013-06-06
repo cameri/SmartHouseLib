@@ -1,22 +1,24 @@
+package smarthouselib.drivers;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package smarthouse.drivers;
 
 /**
  *
  * @author Ricardo A Cabral
  */
-public class ArturoLampDriver implements IToggleableDriver {
-    
+public class WorldTechLampDriver implements IToggleableDriver {
+
   @Override
   public void turnOn() {
-    System.out.println("Arturo turns on lamp.");
+    System.out.println("Turning lamp on.");
   }
 
   @Override
   public void turnOff() {
-    System.out.println("Arturo turns off lamp.");
+    System.out.println("Turning lamp off.");
   }
+    
 }

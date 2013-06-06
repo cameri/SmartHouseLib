@@ -1,10 +1,10 @@
-package smarthouse.devices;
+package smarthouselib.devices;
 
-import smarthouse.DeviceCapabilities;
-import smarthouse.DeviceState;
-import smarthouse.IDevice;
-import smarthouse.IToggleable;
-import smarthouse.drivers.IToggleableDriver;
+import smarthouselib.DeviceCapabilities;
+import smarthouselib.DeviceState;
+import smarthouselib.IDevice;
+import smarthouselib.IToggleable;
+import smarthouselib.drivers.IToggleableDriver;
 
 /**
   *
