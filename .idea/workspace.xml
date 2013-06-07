@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32130455-809f-4ab8-9619-5383e40ccd9a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmartHouseLib.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370563357718" ignored="false" />
+    <file path="/Dummy.txt" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370563942802" ignored="false" />
     <file path="$PROJECT_DIR$/../SmartHouseConsole/SmartHouseConsole.iml" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530901570" ignored="false" />
     <file path="$PROJECT_DIR$/../SmartHouseConsole/src/com/company/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530931152" ignored="false" />
     <file path="/Main.java" changelist="32130455-809f-4ab8-9619-5383e40ccd9a" time="1370530929359" ignored="false" />
@@ -93,19 +94,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Lamp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java">
+      <file leaf-file-name="DeviceState.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="21" selection-start="0" selection-end="1821" vertical-scroll-proportion="0.0">
+            <state line="12" column="10" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Appliance.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DeviceCapabilities.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceCapabilities.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="12" selection-start="87" selection-end="87" vertical-scroll-proportion="0.13333334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Appliance.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-1.3333334">
+            <state line="75" column="22" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,15 +145,6 @@
         <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/drivers/X10DimmableLampDriver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="3" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DimmableLamp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="27" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -476,12 +477,16 @@
       <created>1370563385697</created>
       <updated>1370563385697</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Second commit.">
+      <created>1370563967885</created>
+      <updated>1370563967885</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1602" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -496,7 +501,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.6703601" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24967825" sideWeight="0.6703601" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -607,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="10" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IToggleable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="16" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
@@ -624,13 +622,6 @@
     <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/IDimmable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="22" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DimmableLamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="27" selection-start="1679" selection-end="1679" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -670,19 +661,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Lamp.java">
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="21" selection-start="0" selection-end="1821" vertical-scroll-proportion="0.0">
+        <state line="75" column="22" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="10" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/Appliance.java">
+    <entry file="file://$PROJECT_DIR$/src/smarthouselib/devices/DeviceCapabilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-1.3333334">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="6" column="12" selection-start="87" selection-end="87" vertical-scroll-proportion="0.13333334">
+          <folding />
         </state>
       </provider>
     </entry>
