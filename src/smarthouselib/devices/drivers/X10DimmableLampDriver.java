@@ -9,10 +9,21 @@ import smarthouselib.controllers.IController;
 public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
 {
 
+  IController controller;
+  DeviceDriverState currentState = DeviceDriverState.Uninitialized;
+
   @Override
   public void initialize(IController controller)
   {
+    this.controller = controller;
 
+    this.currentState = DeviceDriverState.Initialized;
+  }
+
+  @Override
+  public DeviceDriverState getState()
+  {
+    return this.currentState;
   }
 
   @Override

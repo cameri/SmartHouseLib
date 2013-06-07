@@ -9,11 +9,21 @@ public class X10LampDriver implements IDeviceDriver, IToggleableDriver
 {
 
   IController controller;
+  DeviceDriverState currentState = DeviceDriverState.Uninitialized;
 
   @Override
   public void initialize(IController controller)
   {
     this.controller = controller;
+
+    // Set state as initialized
+    currentState = DeviceDriverState.Initialized;
+  }
+
+  @Override
+  public DeviceDriverState getState()
+  {
+    return this.currentState;
   }
 
   @Override
