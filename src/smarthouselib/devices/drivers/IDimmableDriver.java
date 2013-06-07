@@ -7,9 +7,11 @@ package smarthouselib.devices.drivers;
 public interface IDimmableDriver
 {
 
-  void setBrightness(int brightness);
+  void setBrightness(int brightness) throws UnsupportedOperationException;
 
-  void decreaseBrightness(int amount);
+  int getBrightness() throws UnsupportedOperationException;
 
-  void increaseBrightness(int amount);
+  void decreaseBrightness(int amount) throws UnsupportedOperationException;
+
+  void increaseBrightness(int amount) throws UnsupportedOperationException;
 }

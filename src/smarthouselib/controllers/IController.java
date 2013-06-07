@@ -10,4 +10,6 @@ public interface IController
 {
 
   void initialize(IControllerDriver driver);
+
+  IControllerDriver getDriver();
 }

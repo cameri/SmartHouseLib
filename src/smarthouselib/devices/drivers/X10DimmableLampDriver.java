@@ -21,6 +21,12 @@ public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
   }
 
   @Override
+  public IController getController()
+  {
+    return this.controller;
+  }
+
+  @Override
   public DeviceDriverState getState()
   {
     return this.currentState;
@@ -33,6 +39,12 @@ public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
   }
 
   @Override
+  public int getBrightness() throws UnsupportedOperationException
+  {
+    throw new UnsupportedOperationException();
+  }
+
+  @Override
   public void decreaseBrightness(int amount)
   {
 
@@ -42,5 +54,14 @@ public class X10DimmableLampDriver implements IDeviceDriver, IDimmableDriver
   public void increaseBrightness(int amount)
   {
 
+  }
+
+
+  @Override
+  public String toString()
+  {
+    return "X10DimmableLampDriver{" +
+      "currentState=" + currentState +
+      '}';
   }
 }

@@ -17,4 +17,16 @@ public class X10Controller implements IController
   {
     this.controller_driver = driver;
   }
+
+  @Override
+  public IControllerDriver getDriver()
+  {
+    return this.controller_driver;
+  }
+
+  @Override
+  public String toString()
+  {
+    return "X10Controller";
+  }
 }

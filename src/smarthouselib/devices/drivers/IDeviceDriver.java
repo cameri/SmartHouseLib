@@ -11,6 +11,8 @@ public interface IDeviceDriver
 
   void initialize(IController controller);
 
+  IController getController();
+
   DeviceDriverState getState();
 
 }

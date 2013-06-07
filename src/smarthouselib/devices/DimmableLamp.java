@@ -1,6 +1,7 @@
 package smarthouselib.devices;
 
 import smarthouselib.devices.drivers.IDeviceDriver;
+import smarthouselib.devices.drivers.IDimmableDriver;
 
 /**
  * @author cameri
@@ -83,12 +84,29 @@ public class DimmableLamp extends Lamp implements IDevice, IDimmable
   @Override
   public void setBrightness(int brightness)
   {
-    this.brightness = Math.min(this.maxBrightness, Math.max(this.minBrightness, brightness));
+    IDeviceDriver _driver = this.getDriver();
+    if (_driver instanceof IDimmableDriver)
+    {
+      this.brightness = Math.min(this.maxBrightness, Math.max(this.minBrightness, brightness));
+      ((IDimmableDriver) _driver).setBrightness(this.brightness);
+    }
   }
 
   @Override
   public int getBrightness()
   {
+    // figure out if the driver supports this...
+    try
+    {
+      IDeviceDriver _driver = this.getDriver();
+      if (_driver instanceof IDimmableDriver)
+      {
+        this.brightness = ((IDimmableDriver) _driver).getBrightness();
+      }
+    } catch (UnsupportedOperationException ex)
+    {
+      // left empty on purpse
+    }
     return this.brightness;
   }
 
@@ -109,5 +127,11 @@ public class DimmableLamp extends Lamp implements IDevice, IDimmable
   public IDeviceDriver getDriver()
   {
     return this.driver;
+  }
+
+  @Override
+  public String toString()
+  {
+    return String.format("DimmableLamp (%s)", this.getID());
   }
 }

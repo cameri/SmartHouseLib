@@ -43,4 +43,19 @@ public class DeviceFactory
     return newLamp;
   }
 
+  public static Appliance CreateX10Appliance(String ID, IController controller)
+  {
+    Appliance newAppliance = new Appliance();
+    newAppliance.setID(ID);
+
+    // Get dimmable driver
+    IDeviceDriver driver = DeviceDriverFactory.CreateX10DimmableLampDriver(controller);
+
+    // Initialize device
+    newAppliance.initialize(driver);
+
+    return newAppliance;
+  }
+
+
 }

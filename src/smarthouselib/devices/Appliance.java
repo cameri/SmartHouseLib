@@ -100,4 +100,9 @@ public class Appliance implements IDevice, IToggleable
     return null;
   }
 
+  @Override
+  public String toString()
+  {
+    return String.format("Appliance (%s)", this.getID());
+  }
 }

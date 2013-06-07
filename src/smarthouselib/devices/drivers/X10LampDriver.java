@@ -21,6 +21,12 @@ public class X10LampDriver implements IDeviceDriver, IToggleableDriver
   }
 
   @Override
+  public IController getController()
+  {
+    return this.controller;
+  }
+
+  @Override
   public DeviceDriverState getState()
   {
     return this.currentState;
@@ -38,4 +44,11 @@ public class X10LampDriver implements IDeviceDriver, IToggleableDriver
     System.out.println("Turning lamp off.");
   }
 
+  @Override
+  public String toString()
+  {
+    return "X10LampDriver{" +
+      "currentState=" + currentState +
+      '}';
+  }
 }
