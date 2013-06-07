@@ -22,4 +22,5 @@ public interface IDimmable
   void decreaseBrightness(int step);
 
   void increaseBrightness(int step);
+
 }

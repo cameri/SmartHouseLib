@@ -22,9 +22,11 @@ public class DeviceFactory
 
     // Get new driver
     IDeviceDriver driver = DeviceDriverFactory.CreateX10LampDriver(controller);
+    newLamp.setDriver(driver);
 
     // Initialize device
-    newLamp.initialize(driver);
+    newLamp.initialize();
+
 
     return newLamp;
   }
@@ -36,9 +38,10 @@ public class DeviceFactory
 
     // Get dimmable driver
     IDeviceDriver driver = DeviceDriverFactory.CreateX10DimmableLampDriver(controller);
+    newLamp.setDriver(driver);
 
     // Initialize device
-    newLamp.initialize(driver);
+    newLamp.initialize();
 
     return newLamp;
   }
@@ -50,9 +53,10 @@ public class DeviceFactory
 
     // Get dimmable driver
     IDeviceDriver driver = DeviceDriverFactory.CreateX10DimmableLampDriver(controller);
+    newAppliance.setDriver(driver);
 
     // Initialize device
-    newAppliance.initialize(driver);
+    newAppliance.initialize();
 
     return newAppliance;
   }

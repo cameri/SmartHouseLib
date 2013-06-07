@@ -10,51 +10,17 @@ import smarthouselib.devices.drivers.IDimmableDriver;
 public class DimmableLamp extends Lamp implements IDevice, IDimmable
 {
 
-  public String ID;
-  DeviceState currentState = DeviceState.Unknown;
-  DeviceCapabilities capabilities[] = new DeviceCapabilities[]{DeviceCapabilities.Dimmable};
-  IDeviceDriver driver;
   int brightness;
   int minBrightness;
   int maxBrightness;
 
   @Override
-  public void initialize(IDeviceDriver driver)
+  public void initialize()
   {
-    this.driver = driver;
     this.brightness = 0;
+    this.getBrightness(); // attempt to get brightness
     this.minBrightness = 0;
     this.maxBrightness = 255;
-  }
-
-  @Override
-  public void setID(String ID)
-  {
-    this.ID = ID;
-  }
-
-  @Override
-  public String getID()
-  {
-    return this.ID;
-  }
-
-  @Override
-  public void setState(DeviceState newState)
-  {
-    this.currentState = newState;
-  }
-
-  @Override
-  public DeviceState getState()
-  {
-    return this.currentState;
-  }
-
-  @Override
-  public DeviceCapabilities[] getCapabilities()
-  {
-    return this.capabilities;
   }
 
   @Override
@@ -113,20 +79,13 @@ public class DimmableLamp extends Lamp implements IDevice, IDimmable
   @Override
   public void decreaseBrightness(int step)
   {
-    this.brightness = Math.max(this.minBrightness, this.brightness - step);
+    this.setBrightness(Math.max(this.minBrightness, this.getBrightness() - step));
   }
 
   @Override
   public void increaseBrightness(int step)
   {
-    this.brightness = Math.min(this.maxBrightness, this.brightness + step);
-  }
-
-
-  @Override
-  public IDeviceDriver getDriver()
-  {
-    return this.driver;
+    this.setBrightness(Math.min(this.maxBrightness, this.getBrightness() + step));
   }
 
   @Override

@@ -1,6 +1,7 @@
 package smarthouselib.devices;
 
 import smarthouselib.devices.drivers.IDeviceDriver;
+import smarthouselib.geo.Zone;
 
 /**
  * @author Ricardo A Cabral
@@ -9,7 +10,7 @@ import smarthouselib.devices.drivers.IDeviceDriver;
 public interface IDevice
 {
 
-  void initialize(IDeviceDriver driver);
+  void initialize();
 
   void setID(String ID);
 
@@ -22,4 +23,10 @@ public interface IDevice
   DeviceCapabilities[] getCapabilities();
 
   IDeviceDriver getDriver();
+
+  void setDriver(IDeviceDriver driver);
+
+  Zone getZone();
+
+  void setZone(Zone zone);
 }

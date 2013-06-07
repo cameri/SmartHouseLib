@@ -6,48 +6,13 @@ import smarthouselib.devices.drivers.IToggleableDriver;
 /**
  * @author Nelson Rosario
  */
-public class Appliance implements IDevice, IToggleable
+public class Appliance extends Device implements IToggleable
 {
 
-  String ID;
-  DeviceState currentState = DeviceState.Unknown;
-  DeviceCapabilities capabilities[] = new DeviceCapabilities[]{DeviceCapabilities.Toggleable};
-  IDeviceDriver driver;
-
   @Override
-  public void initialize(IDeviceDriver driver)
+  public void initialize()
   {
-    this.driver = driver;
-  }
 
-  @Override
-  public void setID(String ID)
-  {
-    this.ID = ID;
-  }
-
-  @Override
-  public String getID()
-  {
-    return this.ID;
-  }
-
-  @Override
-  public void setState(DeviceState newState)
-  {
-    this.currentState = newState;
-  }
-
-  @Override
-  public DeviceState getState()
-  {
-    return currentState;
-  }
-
-  @Override
-  public DeviceCapabilities[] getCapabilities()
-  {
-    return this.capabilities;
   }
 
   @Override
@@ -82,22 +47,6 @@ public class Appliance implements IDevice, IToggleable
     {
       this.turnOff();
     }
-  }
-
-  @Override
-  public IDeviceDriver getDriver()
-  {
-    return this.driver;
-  }
-
-  @Override
-  public IToggleableDriver getToggleableDriver()
-  {
-    if (this.driver instanceof IToggleableDriver)
-    {
-      return (IToggleableDriver) this.driver;
-    }
-    return null;
   }
 
   @Override
