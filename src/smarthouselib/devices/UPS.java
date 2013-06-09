@@ -12,12 +12,7 @@ public class UPS implements IUPS
   IUPSDriver driver;
   Zone zone;
 
-  public UPS(IUPSDriver driver)
-  {
-    this.driver = driver;
-  }
-
-  protected UPS()
+  public UPS()
   {
 
   }

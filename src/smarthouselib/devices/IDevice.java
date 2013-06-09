@@ -10,17 +10,21 @@ import smarthouselib.geo.Zone;
 public interface IDevice
 {
 
-  void initialize();
+  void setId(int Id);
 
-  void setID(String ID);
+  int getId();
 
-  String getID();
+  void setAddress(String address);
+
+  String getAddress();
 
   void setState(DeviceState newState);
 
   DeviceState getState();
 
   DeviceCapabilities[] getCapabilities();
+
+  void setCapabilities(DeviceCapabilities[] capabilities);
 
   IDeviceDriver getDriver();
 

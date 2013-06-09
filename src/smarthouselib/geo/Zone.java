@@ -1,43 +1,16 @@
 package smarthouselib.geo;
 
+import smarthouselib.db.ZoneModel;
+
 /**
  * @author cameri
  * @since 6/7/13
  */
-public class Zone
+public class Zone extends ZoneModel
 {
 
-  ZoneType zoneType = ZoneType.Unknown;
-  String name;
-  int floor;
-
-  public int getFloor()
+  public Zone(int id, String name, int floor)
   {
-    return this.floor;
-  }
-
-  public void setFloor(int newFloor)
-  {
-    this.floor = newFloor;
-  }
-
-  public void setName(String newName)
-  {
-    this.name = newName;
-  }
-
-  public String getName()
-  {
-    return this.name;
-  }
-
-  public void setZoneType(ZoneType newZoneType)
-  {
-    this.zoneType = newZoneType;
-  }
-
-  public ZoneType getZoneType()
-  {
-    return this.zoneType;
+    super(id, name, floor);
   }
 }

@@ -10,12 +10,6 @@ public class Lamp extends Device implements IToggleable
 {
 
   @Override
-  public void initialize()
-  {
-
-  }
-
-  @Override
   public void turnOn()
   {
     IDeviceDriver _driver = this.getDriver();
@@ -52,6 +46,6 @@ public class Lamp extends Device implements IToggleable
   @Override
   public String toString()
   {
-    return String.format("Lamp (%s)", this.getID());
+    return String.format("Lamp (%s)", this.getId());
   }
 }

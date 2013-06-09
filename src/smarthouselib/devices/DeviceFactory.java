@@ -4,9 +4,6 @@
  */
 package smarthouselib.devices;
 
-import smarthouselib.controllers.IController;
-import smarthouselib.devices.drivers.DeviceDriverFactory;
-import smarthouselib.devices.drivers.IDeviceDriver;
 import smarthouselib.devices.drivers.IUPSDriver;
 import smarthouselib.devices.drivers.UPSDriverFactory;
 
@@ -16,58 +13,12 @@ import smarthouselib.devices.drivers.UPSDriverFactory;
 public class DeviceFactory
 {
 
-  public static Lamp CreateX10Lamp(String ID, IController controller)
-  {
-
-    Lamp newLamp = new Lamp();
-    newLamp.setID(ID);
-
-    // Get new driver
-    IDeviceDriver driver = DeviceDriverFactory.CreateX10LampDriver(controller);
-    newLamp.setDriver(driver);
-
-    // Initialize device
-    newLamp.initialize();
-
-
-    return newLamp;
-  }
-
-  public static DimmableLamp CreateX10DimmableLamp(String ID, IController controller)
-  {
-    DimmableLamp newLamp = new DimmableLamp();
-    newLamp.setID(ID);
-
-    // Get dimmable driver
-    IDeviceDriver driver = DeviceDriverFactory.CreateX10DimmableLampDriver(controller);
-    newLamp.setDriver(driver);
-
-    // Initialize device
-    newLamp.initialize();
-
-    return newLamp;
-  }
-
-  public static Appliance CreateX10Appliance(String ID, IController controller)
-  {
-    Appliance newAppliance = new Appliance();
-    newAppliance.setID(ID);
-
-    // Get dimmable driver
-    IDeviceDriver driver = DeviceDriverFactory.CreateX10DimmableLampDriver(controller);
-    newAppliance.setDriver(driver);
-
-    // Initialize device
-    newAppliance.initialize();
-
-    return newAppliance;
-  }
-
   public static UPS CreateAPCUPS(String address, int port)
   {
     IUPSDriver driver = UPSDriverFactory.CreateAPCUPSDriver(address, port);
-    driver.initialize();
-    UPS ups = new UPS(driver);
+    UPS ups = new UPS();
+    ups.setDriver(driver);
+
     return ups;
   }
 }

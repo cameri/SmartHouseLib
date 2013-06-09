@@ -10,40 +10,60 @@ import smarthouselib.geo.Zone;
 public abstract class Device implements IDevice
 {
 
-  String ID;
-  DeviceState currentState = DeviceState.Unknown;
-  DeviceCapabilities capabilities[] = new DeviceCapabilities[]{DeviceCapabilities.Toggleable};
+  int Id;
+  DeviceState state = DeviceState.Unknown;
+  DeviceCapabilities capabilities[] = new DeviceCapabilities[]{};
   IDeviceDriver driver;
   Zone zone;
+  int zone_id;
+  String address;
 
   @Override
-  public void setID(String ID)
+  public void setId(int Id)
   {
-    this.ID = ID;
+    this.Id = Id;
   }
 
   @Override
-  public String getID()
+  public int getId()
   {
-    return this.ID;
+    return this.Id;
+  }
+
+  @Override
+  public void setAddress(String Id)
+  {
+    this.address = Id;
+  }
+
+  @Override
+  public String getAddress()
+  {
+    return this.address;
   }
 
   @Override
   public void setState(DeviceState newState)
   {
-    this.currentState = newState;
+    this.state = newState;
   }
 
   @Override
   public DeviceState getState()
   {
-    return currentState;
+    return state;
   }
 
   @Override
   public DeviceCapabilities[] getCapabilities()
   {
     return this.capabilities;
+  }
+
+  @Override
+  public void setCapabilities(DeviceCapabilities[] capabilities)
+  {
+    this.capabilities = capabilities;
   }
 
   @Override
@@ -67,6 +87,7 @@ public abstract class Device implements IDevice
   @Override
   public void setZone(Zone zone)
   {
+
     this.zone = zone;
   }
 }

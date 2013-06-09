@@ -6,8 +6,6 @@ package smarthouselib.devices;
  */
 public enum DeviceCapabilities
 {
-  Unknown,
-  None,
   Toggleable, // On,Off,Toggle
   Dimmable, // setBrightness,getBrightness
 }

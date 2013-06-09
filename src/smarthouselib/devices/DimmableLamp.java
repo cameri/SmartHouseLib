@@ -14,8 +14,7 @@ public class DimmableLamp extends Lamp implements IDevice, IDimmable
   int minBrightness;
   int maxBrightness;
 
-  @Override
-  public void initialize()
+  public DimmableLamp()
   {
     this.brightness = 0;
     this.getBrightness(); // attempt to get brightness
@@ -91,6 +90,6 @@ public class DimmableLamp extends Lamp implements IDevice, IDimmable
   @Override
   public String toString()
   {
-    return String.format("DimmableLamp (%s)", this.getID());
+    return String.format("DimmableLamp (%s)", this.getId());
   }
 }
