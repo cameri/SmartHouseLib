@@ -143,7 +143,6 @@ public class ZoneModel implements IModel
       stmt.close();
 
       return found;
-
     } catch (SQLException ex)
     {
       ex.printStackTrace();
@@ -170,7 +169,7 @@ public class ZoneModel implements IModel
         stmt.setInt(3, this.getFloor());
 
         int affectedRows = stmt.executeUpdate();
-        boolean failed = true;
+
         if (affectedRows == 1)
         {
           ResultSet rs = stmt.getGeneratedKeys();
