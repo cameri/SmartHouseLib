@@ -7,6 +7,8 @@ package smarthouselib.devices;
 import smarthouselib.controllers.IController;
 import smarthouselib.devices.drivers.DeviceDriverFactory;
 import smarthouselib.devices.drivers.IDeviceDriver;
+import smarthouselib.devices.drivers.IUPSDriver;
+import smarthouselib.devices.drivers.UPSDriverFactory;
 
 /**
  * @author Ricardo A Cabral
@@ -61,5 +63,11 @@ public class DeviceFactory
     return newAppliance;
   }
 
-
+  public static UPS CreateAPCUPS(String address, int port)
+  {
+    IUPSDriver driver = UPSDriverFactory.CreateAPCUPSDriver(address, port);
+    driver.initialize();
+    UPS ups = new UPS(driver);
+    return ups;
+  }
 }

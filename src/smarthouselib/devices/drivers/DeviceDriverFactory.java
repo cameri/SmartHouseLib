@@ -8,6 +8,10 @@ import smarthouselib.controllers.IController;
  */
 public class DeviceDriverFactory
 {
+  protected DeviceDriverFactory()
+  {
+
+  }
 
   public static X10LampDriver CreateX10LampDriver(IController controller)
   {
