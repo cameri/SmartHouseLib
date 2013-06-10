@@ -7,6 +7,4 @@ package smarthouselib.controllers.drivers;
 public interface IControllerDriver
 {
 
-  void initialize();
-
 }

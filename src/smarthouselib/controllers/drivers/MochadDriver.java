@@ -1,5 +1,6 @@
 package smarthouselib.controllers.drivers;
 
+import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
@@ -12,11 +13,10 @@ public class MochadDriver implements IControllerDriver
   static MochadDriver instance;
   String address = "localhost";
   int port = 1099;
-  Socket socket;
 
   protected MochadDriver()
   {
-    // exists only to disallow instantiation
+    /* exists only to disallow instantiation */
   }
 
   public static MochadDriver getInstance()
@@ -48,13 +48,22 @@ public class MochadDriver implements IControllerDriver
     return this.port;
   }
 
-  public void initialize()
+  public synchronized boolean write(String command)
   {
-
-  }
-
-  public void connect()
-  {
+    boolean successful = false;
+    try
+    {
+      Socket socket = new Socket(this.address, this.port);
+      PrintWriter writer = new PrintWriter(socket.getOutputStream(), true);
+      writer.write(command);
+      successful = true;
+      writer.close();
+      socket.close();
+    } catch (Exception ex)
+    {
+      ex.printStackTrace();
+    }
+    return successful;
 
   }
 
